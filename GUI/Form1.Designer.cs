@@ -167,6 +167,7 @@ namespace GUI
             this.Controls.Add(this.listBox_dolgozok);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_belepeseve)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_fizetes)).EndInit();
             this.ResumeLayout(false);
