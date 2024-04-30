@@ -29,6 +29,7 @@ namespace GUI
         {
             listBox_dolgozok.Items.Clear();
             dolgozok = adat.getAllDolgozo();
+            listBox_dolgozok.Items.AddRange(dolgozok.ToArray());
         }
     }
 }
