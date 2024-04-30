@@ -18,9 +18,19 @@ namespace ConsoleApp
             feladat01();
             feladat02();
             feladat03();
+            feladat04();
 
             Console.WriteLine("Program vége!");
             Console.ReadLine();
+        }
+
+        private static void feladat04()
+        {
+            Console.WriteLine("4. feladat:");
+            foreach (var item in dolgozok.FindAll(a => a.reszleg=="asztalosműhely"))
+            {
+                Console.WriteLine($"\t{item.nev} ");
+            }
         }
 
         private static void feladat03() //-- hányan dolgoznak az egyes részlegeken
