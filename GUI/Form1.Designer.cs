@@ -40,6 +40,7 @@ namespace GUI
             this.textBox_nem = new System.Windows.Forms.TextBox();
             this.numericUpDown_belepeseve = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_fizetes = new System.Windows.Forms.NumericUpDown();
+            this.button_rogzites = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_belepeseve)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_fizetes)).BeginInit();
             this.SuspendLayout();
@@ -138,11 +139,21 @@ namespace GUI
             this.numericUpDown_fizetes.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown_fizetes.TabIndex = 10;
             // 
+            // button_rogzites
+            // 
+            this.button_rogzites.Location = new System.Drawing.Point(217, 267);
+            this.button_rogzites.Name = "button_rogzites";
+            this.button_rogzites.Size = new System.Drawing.Size(559, 86);
+            this.button_rogzites.TabIndex = 11;
+            this.button_rogzites.Text = "Rögzítés";
+            this.button_rogzites.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_rogzites);
             this.Controls.Add(this.numericUpDown_fizetes);
             this.Controls.Add(this.numericUpDown_belepeseve);
             this.Controls.Add(this.textBox_nem);
@@ -176,6 +187,7 @@ namespace GUI
         private System.Windows.Forms.TextBox textBox_nem;
         private System.Windows.Forms.NumericUpDown numericUpDown_belepeseve;
         private System.Windows.Forms.NumericUpDown numericUpDown_fizetes;
+        private System.Windows.Forms.Button button_rogzites;
     }
 }
 
