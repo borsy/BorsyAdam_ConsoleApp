@@ -25,7 +25,11 @@ namespace ConsoleApp
 
         private static void feladat03() //-- hányan dolgoznak az egyes részlegeken
         {
-            
+            Console.WriteLine("3. feladat:");
+            foreach (var item in dolgozok.GroupBy(a => a.reszleg).Select(b => new {reszleg=b.Key, letszam = b.Count()}))
+            {
+                Console.WriteLine($"\t{item.reszleg}: {item.letszam}");
+            }
         }
 
         private static void feladat02() //-- a legmagasabb keresetű dolgozó nevét
