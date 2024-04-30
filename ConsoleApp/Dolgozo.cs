@@ -11,11 +11,11 @@ namespace ConsoleApp
     {
         //"nev","neme","reszleg","belepesev","ber"
 
-        private string nev;
-        private string neme;
-        private string reszleg;
-        private int belepesev;
-        private int ber;
+        public string nev;
+        public string neme;
+        public string reszleg;
+        public int belepesev;
+        public int ber;
 
         public Dolgozo(string nev, string neme, string reszleg, int belepesev, int ber)
         {
