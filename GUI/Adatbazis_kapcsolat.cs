@@ -38,6 +38,19 @@ namespace GUI
             }
         }
 
+        internal List<Dolgozo> getAllDolgozo()
+        {
+            List<Dolgozo> dolgozos = new List<Dolgozo>();
+            sqlparancs.CommandText = "SELECT * FROM dolgozok";
+            adatbazis_kapcsolat_nyitasa();
+            using (MySqlDataReader adatbazis_olvasas = sqlparancs.ExecuteReader())
+            {
+
+            }
+
+            return dolgozos;
+        }
+
         private void adatbazis_kapcsolat_zarasa()
         {
             if (adatbazis_kapcsolodas.State == System.Data.ConnectionState.Open)

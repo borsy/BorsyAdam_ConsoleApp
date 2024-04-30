@@ -13,6 +13,7 @@ namespace GUI
     public partial class Form1 : Form
     {
         List<Dolgozo> dolgozok = new List<Dolgozo>();
+        Adatbazis_kapcsolat adat = new Adatbazis_kapcsolat();
 
         public Form1()
         {
@@ -21,7 +22,13 @@ namespace GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            lista_frissitese();
+        }
 
+        private void lista_frissitese()
+        {
+            listBox_dolgozok.Items.Clear();
+            dolgozok = adat.getAllDolgozo();
         }
     }
 }
