@@ -45,7 +45,11 @@ namespace GUI
             adatbazis_kapcsolat_nyitasa();
             using (MySqlDataReader adatbazis_olvasas = sqlparancs.ExecuteReader())
             {
-
+                while (adatbazis_olvasas.Read())
+                {
+                    // -- rekordonkénti feldolgozás
+                    Dolgozo dolgozo = new Dolgozo(adatbazis_olvasas.GetString("nev"),adatbazis_olvasas.GetString("neme"),adatbazis_olvasas.GetString("reszleg"),adatbazis_olvasas.GetInt32("belepesev"),adatbazis_olvasas.GetInt32("ber"));
+                }
             }
 
             return dolgozos;
