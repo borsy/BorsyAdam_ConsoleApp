@@ -22,13 +22,13 @@ namespace ConsoleApp
 
         private static void beolvasas()
         {
-            using (StreamReader sr = new StreamReader("dolgozok.csv"))
+            using (StreamReader olvaso = new StreamReader("dolgozok.csv"))
             {
-                sr.ReadLine(); // --fejléc kihagyása, nem kell
-                while (!sr.EndOfStream)
+                olvaso.ReadLine(); // --fejléc kihagyása, nem kell
+                while (!olvaso.EndOfStream)
                 {
-                    string[] line = sr.ReadLine().Replace('"', ' ').Split(',');
-                    Dolgozo dolgozo = new Dolgozo(line[0].Trim(), line[1].Trim(), line[2].Trim(), int.Parse(line[3].Trim()), int.Parse(line[4].Trim()));
+                    string[] sor = olvaso.ReadLine().Replace('"', ' ').Split(',');
+                    Dolgozo dolgozo = new Dolgozo(sor[0].Trim(), sor[1].Trim(), sor[2].Trim(), int.Parse(sor[3].Trim()), int.Parse(sor[4].Trim()));
                     dolgozok.Add(dolgozo);
                 }
             }
